@@ -1,0 +1,122 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+
+}
+
+ menu{
+    grid-area: menu;
+    display: flex;
+    background-color: #6d8023;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    font-size: 25px;
+    padding: 10px;
+    flex-direction: column;  
+    border: dotted black;
+}
+menu a{
+    text-decoration: none;
+    border: dotted black;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #D0B08B;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 12vh;
+    gap: 10px;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+main{
+    grid-area: main;
+    background: #473626;
+    color: #c9aa98;
+    font-size: 25px;
+    padding: 10px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #D0B08B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    gap: 5px;
+    color: black;
+    font-size: 25px;
+}
+a{
+    color: black;
+}
+
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item{
+    padding: 20px;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    gap: 15px;
+}
+button{
+    background: #6d8023;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: #c9aa98;
+}
+.grid-item img{
+    width: 90%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px #785845 ; 
+    
+}
+.container{
+    display: grid;
+    grid-template-areas:
+    "menu nav nav nav nav"
+    "menu main main main main"
+    "footer footer footer footer footer";
+    grid-template-columns: 1fr 10fr 10fr 10fr;
+    
+}
+
+
+@media  (min-width: 576px) and (max-width: 1200px) {
+    .container {
+        grid-template-areas:
+            "menu "
+            "nav"
+            "main"
+            "footer";
+    }
+    .container-grid{
+        grid-template-columns: 1fr;
+    }
+    menu{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
